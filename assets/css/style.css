@@ -1,0 +1,394 @@
+/* font */
+@import url(/assets/font/Retro\ Gaming.ttf);
+@import url(/assets/font/Graphique\ W01\ Regular.ttf);
+
+@font-face {
+    font-family: retrogaming;
+    src: url(/assets/font/Retro\ Gaming.ttf);
+}
+
+@font-face {
+    font-family: netflix;
+    src: url(/assets/font/Graphique\ W01\ Regular.ttf);
+}
+
+@font-face {
+    font-family: textesite;
+    src: url(/assets/font/BebasNeue-Regular.ttf);
+}
+/* font */
+
+/* reglage */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a,p,h2,h3,h4,span{
+    font-family: textesite;
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+}
+
+
+body{
+    width: 100%;
+    height: 100%;
+}
+/* reglage */
+
+/* header et nav */
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(220, 0, 0);
+}
+
+nav{
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0px;
+    width: calc(100% - 20px);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(220, 0, 0);
+}
+
+nav a{
+    color: black;
+}
+
+nav img{
+    width: 20px;
+    height: 20px;
+}
+
+nav span{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: netflix;
+    font-size: 50px;
+    color: black;
+}
+
+.left-nav, .search-bar, .home-button, .right-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-nav, .right-nav{
+    gap: 20px;
+}
+
+.search-bar input{
+    padding: 5px;
+    border-radius: 20px;
+    border: solid 2px black;
+}
+
+
+.dropdown{
+    position: relative;
+    width:100px;
+    height: 25px;
+    border-radius: 5px;
+    background: rgb(220, 0, 0);
+}
+
+.button-cat{
+    font-family: textesite;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(220, 0, 0);
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.button-cat:hover,.home-button:hover,nav a:hover,.menu-cat li:hover, .card-film:hover{
+    transition: tranform .2s;
+    transform: scale(1.1);
+}
+
+.menu-cat{
+    width: 150px;
+    border-radius:10px ;
+    position: absolute;
+    height: 0;
+    overflow-y: hidden;
+    padding: 0 20px;
+    background-color: black;
+    transition: height .3s ease-in-out;
+}
+
+.menu-cat li{
+    width: 100%;
+    list-style-type: none;
+    padding: 5px 0;
+    color: white;
+}
+
+.menu-cat li a{
+    font-size: 18px;
+    color: white;
+    margin-left: 5px;
+}
+
+.menu-cat li:last-child{
+    padding-bottom: 25px;
+}
+/* header et nav */
+
+main{
+    width: 100%;
+}
+/* card film */
+.card-film{
+    font-size: 18px;
+    width: 18%;
+    height: 50vh;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-film p{
+    margin: 5px 5px 5px 0px;
+}
+
+.card-film span{
+    margin: 5px 0px 5px 5px;
+}
+
+.card-film img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom-card-film{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+/* card film */
+
+/* div des films acceuil */
+.film-populaire, .last-film, .best-rated{
+    padding: 20px;
+    width: calc(100% - 40px);
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.pop-div, .last-film-div, .best-rated-div{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 90%;
+}
+
+main h2{
+    cursor: pointer;
+    margin-top:20px ;
+    font-size: 30px;
+    margin-left: 110px;
+    color: white;
+    width: 100%;
+}
+/* div des film acceuil */
+
+/* film par catégorie */
+.film-categorie{
+    gap: 10px;
+    width: 100%;
+    height: 230vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+#list-film-type{
+    gap: 10px;
+    height: 230vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.film-categorie-div,#div-list-film-type{
+    gap: 10px;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.film-categorie h2,#list-film-type h2{
+    cursor: pointer;
+    font-size: 45px;
+    margin-right:100px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* film par catégorie */
+
+/* detail d'un film */
+.film-detail{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.film-detail-div{
+    /* border: solid 2px rgb(220, 0, 0); */
+    padding: 20px;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.film-detail-img{
+    width: 200px;
+    height: 50%;
+}
+
+.film-detail-img img{
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.detail p{
+    gap: 10px;
+    font-size: 20px;
+    margin: 20px;
+    width:100%;
+    padding: 10px;
+    color: white;
+    font-size: 25px;
+}
+.detail span{
+    margin-left:10px ;
+}
+
+.detail{
+    width:calc(100% - 200px);
+    height: 50%;
+}
+
+iframe{
+    width: 100%;
+    height: 100vh;
+}
+
+.film-detail h2{
+    margin: 20px;
+    color: black;
+    margin-right: 50px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.synopsis{
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+}
+
+.synopsis p{
+    width: 80%;
+    font-size: 22px;
+}
+/* detail d'un film */
+
+/* footer */
+footer{
+    border: solid 2px rgb(220, 0, 0);
+    width: calc(100% - 4px);
+    height: 200px;
+    background-color: black;
+}
+
+footer h3, footer h2,footer h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: calc(100% - 20px);
+    height: 100%;
+}
+
+.div-footer{
+    gap: 10px;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div-footer-content{
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer button{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(220, 0, 0);
+    border: solid 2px white;
+}
+/* footer */
+
+
+
