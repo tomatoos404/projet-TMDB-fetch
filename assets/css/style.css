@@ -1,20 +1,20 @@
 /* font */
-@import url(../assets/font/Retro\ Gaming.ttf);
-@import url(../assets/font/Graphique\ W01\ Regular.ttf);
+@import url(./assets/font/Retro\ Gaming.ttf);
+@import url(./assets/font/Graphique\ W01\ Regular.ttf);
 
 @font-face {
     font-family: retrogaming;
-    src: url(../assets/font/Retro\ Gaming.ttf);
+    src: url(./assets/font/Retro\ Gaming.ttf);
 }
 
 @font-face {
     font-family: netflix;
-    src: url(../assets/font/Graphique\ W01\ Regular.ttf);
+    src: url(./assets/font/Graphique\ W01\ Regular.ttf);
 }
 
 @font-face {
     font-family: textesite;
-    src: url(../assets/font/BebasNeue-Regular.ttf);
+    src: url(./assets/font/BebasNeue-Regular.ttf);
 }
 /* font */
 
